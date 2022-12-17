@@ -1,4 +1,5 @@
-﻿void FillArray(int[] collection)
+﻿
+void FillArray(int[] collection)
 {
     int length=collection.Length;
     int index=0;
@@ -9,7 +10,7 @@
         index++;
     }
 }
-
+// Печать массива
 void PrintArray(int[] col)
 {
     int count=col.Length;
@@ -20,16 +21,18 @@ void PrintArray(int[] col)
         position++;
     }
 }
-
+// Возвратный метод IndexOf
 int IndexOf(int[] collection, int find)
 {
     int count=collection.Length;
     int index=0;
+// Если элемента нет, по возвращаем -1
     int position=-1;
     while (index<count)
     {
         if(collection[index]==find)
         {
+// Находим первое вхождение и прерываем break
             position=index;
             break;
         } 
@@ -37,13 +40,15 @@ int IndexOf(int[] collection, int find)
     }
     return position;
 }
-
+// Определили массив из 10 элементов
 int[] array=new int[10];
 
+// Вызвали метод FillArray, который заполнил массив рандомными числами от 1 до 10
 FillArray(array);
 array[4]=4;
 array[6]=4;
+// Вызвали метод PrintArray, который распечатал массив
 PrintArray(array);
 Console.WriteLine();
-int pos=IndexOf(array,444);
+int pos=IndexOf(array,9);
 Console.WriteLine(pos);
