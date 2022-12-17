@@ -32,7 +32,8 @@ int IndexOf(int[] collection, int find)
     {
         if(collection[index]==find)
         {
-// Находим первое вхождение и прерываем break
+// Находим первое вхождение и прерываем break, чтобы в терминале указывался только индекс 
+// первого искомого числа 
             position=index;
             break;
         } 
